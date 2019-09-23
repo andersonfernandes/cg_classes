@@ -10,6 +10,7 @@ mask = cv2.inRange(image, lower_green, upper_green)
 segmented_image = cv2.bitwise_and(image, image, mask=255-mask)
 
 cv2.imshow("Segmented Image", segmented_image)
+cv2.imwrite("./img/segmented_green_background_image.png", segmented_image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
